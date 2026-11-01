@@ -116,12 +116,12 @@
     </span>
   </div>
 
-  <p class="kicker"><span lang="en">Notes for Zipline's integrated planning team</span></p>
+  <p class="kicker"><span lang="en">Notes for Zipline's manufacturing and quality teams</span></p>
   <h1>
     <span lang="en">A year of deliveries, every day</span>
     <span class="big">×365</span>
   </h1>
-  <p class="lead"><span lang="en">Zipline and Uber aim for one million drone deliveries a day by the end of 2029, about what Zipline delivered over the past year. That means the hardware behind it doubles roughly every five months, and every new metro has to be ready before launch day. Here is where I think that is decided, and how I'd help.</span></p>
+  <p class="lead"><span lang="en">Zipline and Uber aim for one million drone deliveries a day by the end of 2029, about what Zipline delivered over the past year. If hardware keeps pace, final assembly and end-of-line test have to double roughly every five months, in-house and at contract manufacturers. Here is what I think that means for the line, and how I'd help.</span></p>
   <p class="note"><span lang="en">Built from public information only. Assumptions are labelled.</span></p>
 
   <div class="chart">
@@ -163,7 +163,18 @@
         </div>
       </details>
       <details class="card">
-        <summary><h3><span lang="en">2. Where a metro launch is decided</span></h3><span class="take"><span lang="en">Contract manufacturers, final assembly capacity, and the long-pole item.</span></span></summary>
+        <summary><h3><span lang="en">2. What final assembly and test need</span></h3><span class="take"><span lang="en">Stations grow ~6× a year, and first-pass yield is a capacity lever.</span></span></summary>
+        <div class="body">
+          <div class="stats">
+            <div class="stat"><b>~6× / yr</b><span><span lang="en">growth in drones to build each week, and in the stations to build them</span></span></div>
+            <div class="stat"><b>1 → 20</b><span><span lang="en">final assembly stations from 2026 to Dec 2029, with my station times</span></span></div>
+            <div class="stat"><b>~9 h / wk</b><span><span lang="en">of end-of-line test time per point of first-pass yield, at Dec 2029 volume</span></span></div>
+          </div>
+          <p class="src"><span lang="en">Station counts use my guesses: 45 min of final assembly and 30 min of end-of-line test per drone, 90% first-pass yield (failures retested once), two 8-hour shifts, 85% uptime, 2% of the fleet replaced each month. The counts move with those numbers; the ~6× a year doesn't, because it comes from the growth curve. So a capacity model built on time studies needs refreshing every few months, not every year.</span></p>
+        </div>
+      </details>
+      <details class="card">
+        <summary><h3><span lang="en">3. Where the ramp is decided</span></h3><span class="take"><span lang="en">Suppliers, contract manufacturers, final assembly and test, metro readiness.</span></span></summary>
         <div class="body">
           <p class="sub"><span lang="en">The hardware flow as Zipline's postings describe it. Highlighted steps are my hypotheses.</span></p>
           <ol class="flow">
@@ -176,14 +187,15 @@
         </div>
       </details>
       <details class="card">
-        <summary><h3><span lang="en">3. A model you can run on your numbers</span></h3><span class="take"><span lang="en">Growth path, fleet size, and a backward schedule for one metro.</span></span></summary>
+        <summary><h3><span lang="en">4. A model you can run on your numbers</span></h3><span class="take"><span lang="en">Growth path, fleet size, line capacity, and a backward schedule for one metro.</span></span></summary>
         <div class="body">
           <ol class="flow list">
             <li><div class="name"><span lang="en">Growth</span></div><div class="why"><span lang="en">Deliveries per day, drones in service and drones added, month by month from Aug 2026 to Dec 2029.</span></div></li>
+            <li><div class="name"><span lang="en">Line Capacity</span></div><div class="why"><span lang="en">Drones to build per week, final assembly and end-of-line test stations, and the test hours lost to retests, from 2026 to Dec 2029.</span></div></li>
             <li><div class="name"><span lang="en">Metro Launch</span></div><div class="why"><span lang="en">Order-by week for each hardware item from its lead time; the long pole sets how much notice a launch needs.</span></div></li>
-            <li><div class="name"><span lang="en">Inputs</span></div><div class="why"><span lang="en">Change deliveries per drone, the spare float, or the target date: everything recalculates.</span></div></li>
+            <li><div class="name"><span lang="en">Inputs</span></div><div class="why"><span lang="en">Change deliveries per drone, station times, yield, shifts or the target date: everything recalculates.</span></div></li>
           </ol>
-          <p class="src" style="margin-bottom:14px"><span lang="en">Blue cells are inputs; yellow cells are my assumptions, to replace with real data. Lead times are examples.</span></p>
+          <p class="src" style="margin-bottom:14px"><span lang="en">Blue cells are inputs; yellow cells are my assumptions, to replace with real data. Station times and lead times are examples.</span></p>
           <div class="btns"><a class="btn primary" href="Metro_Ramp_Model_Tristan_Massicotte.xlsx"><span lang="en">Download the model (Excel)</span></a></div>
         </div>
       </details>
@@ -194,14 +206,14 @@
   <section>
     <h2><span lang="en">My 16 weeks</span></h2>
     <ol class="plan">
-      <li><span class="wk"><span lang="en">Wk 1–2</span></span><span class="what"><b><span lang="en">Learn the line and one metro.</span></b> <span lang="en">Shifts in final assembly and end-of-line test; map the hardware an upcoming metro needs, with quantities and lead times.</span></span></li>
-      <li><span class="wk"><span lang="en">Wk 3–6</span></span><span class="what"><b><span lang="en">Own material readiness for that metro.</span></b> <span lang="en">A clear-to-launch tracker: on hand, on order and short for every item, the long pole, and a weekly recovery plan.</span></span></li>
-      <li><span class="wk"><span lang="en">Wk 7–11</span></span><span class="what"><b><span lang="en">Test capacity against the curve.</span></b> <span lang="en">Time studies to update the capacity model, then compare CM and in-house capacity with the next two doublings, with Manufacturing and Global Supply.</span></span></li>
-      <li><span class="wk"><span lang="en">Wk 12–16</span></span><span class="what"><b><span lang="en">Run it and prove it.</span></b> <span lang="en">Support the launch, measure readiness slips against the plan, and turn the tracker into a template for the next metros.</span></span></li>
+      <li><span class="wk"><span lang="en">Wk 1–2</span></span><span class="what"><b><span lang="en">Learn the line.</span></b> <span lang="en">Shifts in final assembly and end-of-line test, station by station, with the people who run them.</span></span></li>
+      <li><span class="wk"><span lang="en">Wk 3–6</span></span><span class="what"><b><span lang="en">Refresh the capacity model.</span></b> <span lang="en">Time studies on the assemblies the team picks, and first-pass yield by test step, so the model runs on real station times and real retest load.</span></span></li>
+      <li><span class="wk"><span lang="en">Wk 7–11</span></span><span class="what"><b><span lang="en">Test capacity against the curve.</span></b> <span lang="en">Compare in-house and CM capacity with the next two doublings, and list where stations, fixtures or people run out first, with Quality and Global Supply.</span></span></li>
+      <li><span class="wk"><span lang="en">Wk 12–16</span></span><span class="what"><b><span lang="en">Run it and prove it.</span></b> <span lang="en">Help land one fix on the line (a station, a fixture or a test step), measure before and after, and leave the model ready to refresh every month.</span></span></li>
     </ol>
     <div class="ask">
       <b><span lang="en">My ask:</span></b>
-      <span lang="en">a four-month summer 2027 internship in material planning or manufacturing, in South San Francisco. I'd come on a J-1 intern visa through a third-party sponsor; I handle the paperwork, Zipline signs a training plan.</span>
+      <span lang="en">a four-month summer 2027 internship in manufacturing and quality engineering (I've applied to the Quality & Manufacturing internship) or material planning, in South San Francisco. I'd come on a J-1 intern visa through a third-party sponsor; I handle the paperwork, Zipline signs a training plan.</span>
     </div>
   </section>
 
